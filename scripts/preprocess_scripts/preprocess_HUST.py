@@ -111,11 +111,11 @@ def calc_Q(I, t, is_charge):  # noqa
 def preprocess(path):
     path = Path(path)
 
-    with zipfile.ZipFile(path / 'hust_data.zip', 'r') as zip_ref:
-        pbar = tqdm_wrapper(zip_ref.namelist())
-        for file in pbar:
-            pbar.set_description(f'Unzip HUST file {file}')
-            zip_ref.extract(file, path)
+    # with zipfile.ZipFile(path / 'hust_data.zip', 'r') as zip_ref:
+    #     pbar = tqdm_wrapper(zip_ref.namelist())
+    #     for file in pbar:
+    #         pbar.set_description(f'Unzip HUST file {file}')
+    #         zip_ref.extract(file, path)
 
     datadir = path / 'our_data'
     desc = 'Processing cells'
